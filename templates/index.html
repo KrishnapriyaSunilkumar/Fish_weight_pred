@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fish Market Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            width: 80%;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fish Market Predictor</h1>
+
+    <form action="/predict" method="post">
+        <label>Length1:</label><br>
+        <input type="text" name="Length1" required><br>
+
+        <label>Length2:</label><br>
+        <input type="text" name="Length2" required><br>
+
+        <label>Length3:</label><br>
+        <input type="text" name="Length3" required><br>
+
+        <label>Height:</label><br>
+        <input type="text" name="Height" required><br>
+
+        <label>Width:</label><br>
+        <input type="text" name="Width" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
